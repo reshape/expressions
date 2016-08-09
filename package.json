@@ -1,0 +1,41 @@
+{
+  "name": "reshape-expressions",
+  "description": "Local variables, expressions, loops, and conditionals for reshape",
+  "version": "0.0.0",
+  "author": "Jeff Escalante",
+  "ava": {
+    "verbose": "true"
+  },
+  "bugs": "https://github.com/reshape/expressions/issues",
+  "devDependencies": {
+    "ava": "^0.15.2",
+    "coveralls": "^2.11.9",
+    "nyc": "^7.0.0",
+    "reshape": "reshape/reshape",
+    "reshape-code-gen": "reshape/code-gen",
+    "reshape-parser": "reshape/parser",
+    "snazzy": "^4.0.0",
+    "standard": "^7.1.2"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "homepage": "https://github.com/reshape/expressions",
+  "keywords": [
+    "expressions",
+    "loops",
+    "conditionals",
+    "reshape-plugin"
+  ],
+  "license": "MIT",
+  "main": "lib",
+  "repository": "https:/github.com/reshape/expressions",
+  "scripts": {
+    "test": "ava",
+    "coverage": "nyc --reporter=html ava && open coverage/index.html",
+    "coveralls": "nyc --reporter=lcov ava && cat ./coverage/lcov.info | coveralls"
+  },
+  "dependencies": {
+    "reshape-loader": "^0.10.3"
+  }
+}
