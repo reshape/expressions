@@ -33,7 +33,6 @@ You have full control over the delimiters used for injecting locals, as well as 
 | ------ | ----------- | ------- |
 | **delimiters** | Array containing beginning and ending delimiters for escaped locals. | `['{{', '}}']` |
 | **unescapeDelimiters** | Array containing beginning and ending delimiters for inserting unescaped locals. | `['{{{', '}}}']` |
-| **locals** | Object containing any local variables you want to be available inside your expressions. |
 | **conditionalTags** | Array containing names for tags used for standard `if`/`else if`/`else` logic | `['if', 'elseif', 'else']` |
 | **loopTags** | Array containing names for standard `for` loop logic | `['each']` |
 
