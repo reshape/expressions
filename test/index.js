@@ -33,7 +33,7 @@ test('expression spacing', (t) => {
 
 test('expression error', (t) => {
   return expectError('expression_error', (err) => {
-    t.truthy(err.toString() === 'SyntaxError: Unexpected token ILLEGAL')
+    t.truthy(err.toString() === "SyntaxError: Unexpected character '@' (1:29)")
   })
 })
 
@@ -71,7 +71,7 @@ test('conditional - nested conditionals', (t) => {
 
 test('conditional - expression error', (t) => {
   return expectError('conditional_expression_error', (err) => {
-    t.truthy(err.toString() === 'SyntaxError: Unexpected token ILLEGAL')
+    t.truthy(err.toString() === "SyntaxError: Unexpected character '#' (1:31)")
   })
 })
 
@@ -124,9 +124,7 @@ test('loop - no loop attribute', (t) => {
 })
 
 test('loop - no array or object passed', (t) => {
-  return expectError('loop_no_collection', (err) => {
-    t.truthy(err.toString() === 'Error: You must provide an array or object to loop through')
-  })
+  return matchExpected(t, 'loop_no_collection')
 })
 
 test('loop - no loop arguments', (t) => {
@@ -137,13 +135,13 @@ test('loop - no loop arguments', (t) => {
 
 test('loop - no "in" keyword', (t) => {
   return expectError('loop_no_in', (err) => {
-    t.truthy(err.toString() === "Error: Loop statement lacking 'in' keyword")
+    t.truthy(err.toString() === "Error: Loop statement lacking 'in' or 'of' keyword")
   })
 })
 
 test('loop - expression error', (t) => {
   return expectError('loop_expression_error', (err) => {
-    t.truthy(err.toString() === 'SyntaxError: Unexpected token ILLEGAL')
+    t.truthy(err.toString() === "SyntaxError: Unexpected character '#' (1:63)")
   })
 })
 
@@ -151,7 +149,7 @@ test('loop - expression error', (t) => {
 // Utility
 //
 
-function matchExpected (t, name, config, log = false) {
+function matchExpected (t, name, config = {}, log = false) {
   const html = readFileSync(path.join(fixtures, `${name}.html`), 'utf8')
   const expected = readFileSync(path.join(fixtures, `${name}.expected.html`), 'utf8')
 
@@ -164,7 +162,9 @@ function matchExpected (t, name, config, log = false) {
 function expectError (name, cb) {
   const html = readFileSync(path.join(fixtures, `${name}.html`), 'utf8')
 
-  return reshape([exp()])
+  return reshape({ plugins: exp() })
     .process(html)
+    .then((res) => res.output())
+    .then(() => { throw new Error('no error!') })
     .catch(cb)
 }
