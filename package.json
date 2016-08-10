@@ -31,7 +31,8 @@
   "repository": "https:/github.com/reshape/expressions",
   "scripts": {
     "coverage": "nyc --reporter=html ava && open coverage/index.html",
-    "coveralls": "nyc --reporter=lcov ava && cat ./coverage/lcov.info | coveralls",
-    "test": "ava"
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "lint": "standard | snazzy",
+    "test": "npm run lint && nyc ava"
   }
 }
