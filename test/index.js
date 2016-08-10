@@ -21,8 +21,8 @@ test('unescaped', (t) => {
 
 test('custom delimiters', (t) => {
   return matchExpected(t, 'custom_delimiters', {
-    delimiters: ['{%', '%}'],
-    unescapeDelimiters: ['{{%', '%}}'],
+    delimiters: ['<%=', '%>'],
+    unescapeDelimiters: ['<%-', '%>'],
     locals: { test: 'wow' }
   })
 })
