@@ -1,8 +1,6 @@
 const test = require('ava')
 const path = require('path')
 const reshape = require('reshape')
-const parser = require('reshape-parser')
-const generator = require('reshape-code-gen')
 const exp = require('../lib')
 const {readFileSync} = require('fs')
 const fixtures = path.join(__dirname, 'fixtures')
@@ -157,7 +155,7 @@ function matchExpected (t, name, config, log = false) {
   const html = readFileSync(path.join(fixtures, `${name}.html`), 'utf8')
   const expected = readFileSync(path.join(fixtures, `${name}.expected.html`), 'utf8')
 
-  return reshape({ plugins: exp(config), parser, generator })
+  return reshape({ plugins: exp(config) })
     .process(html)
     .then((res) => { log && console.log(res.output.toString(), '\n----------\n', res.output(config.locals)); return res })
     .then((res) => { t.truthy(res.output(config.locals).trim() === expected.trim()) })
