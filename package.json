@@ -7,6 +7,9 @@
     "verbose": "true"
   },
   "bugs": "https://github.com/reshape/expressions/issues",
+  "dependencies": {
+    "reshape-loader": "reshape/loader"
+  },
   "devDependencies": {
     "ava": "^0.15.2",
     "coveralls": "^2.11.9",
@@ -22,20 +25,17 @@
   },
   "homepage": "https://github.com/reshape/expressions",
   "keywords": [
+    "conditionals",
     "expressions",
     "loops",
-    "conditionals",
     "reshape-plugin"
   ],
   "license": "MIT",
   "main": "lib",
   "repository": "https:/github.com/reshape/expressions",
   "scripts": {
-    "test": "ava",
     "coverage": "nyc --reporter=html ava && open coverage/index.html",
-    "coveralls": "nyc --reporter=lcov ava && cat ./coverage/lcov.info | coveralls"
-  },
-  "dependencies": {
-    "reshape-loader": "^0.10.3"
+    "coveralls": "nyc --reporter=lcov ava && cat ./coverage/lcov.info | coveralls",
+    "test": "ava"
   }
 }
