@@ -168,14 +168,14 @@ else
   p Foo is probably just foo in the end.
 ```
 
-#### Loops
+### Loops
 
 You can use the `each` tag to build loops. It works with both arrays and objects. For example:
 
 Input:
 
 ```html
-<each loop="item, index in anArray">
+<each loop="item, index of anArray">
   <p>{{ index }}: {{ item }}</p>
 </each>
 ```
@@ -200,7 +200,7 @@ Output:
 <p>2: bar</p>
 ```
 
-And an example using an object:
+And an example using an object (note that it uses "in" rather than "of", in the same way that this would be handled with javascript natively):
 
 ```html
 <each loop="value, key in anObject">
