@@ -1,6 +1,6 @@
 {
   "name": "reshape-expressions",
-  "description": "Local variables, expressions, loops, and conditionals for reshape",
+  "description": "local variables, expressions, loops, and conditionals",
   "version": "0.1.0",
   "author": "Jeff Escalante",
   "ava": {
