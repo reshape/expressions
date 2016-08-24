@@ -28,7 +28,7 @@
   ],
   "license": "MIT",
   "main": "lib",
-  "repository": "https:/github.com/reshape/expressions",
+  "repository": "reshape/expressions",
   "scripts": {
     "coverage": "nyc --reporter=html ava && open coverage/index.html",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
