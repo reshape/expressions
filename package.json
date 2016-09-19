@@ -10,7 +10,7 @@
   "bugs": "https://github.com/reshape/expressions/issues",
   "devDependencies": {
     "ava": "^0.16.0",
-    "coveralls": "^2.11.9",
+    "coveralls": "^2.11.14",
     "nyc": "^8.1.0",
     "reshape": "reshape/reshape",
     "snazzy": "^5.0.0",
