@@ -45,6 +45,10 @@ test('conditional - only "if" condition', (t) => {
   return matchExpected(t, 'conditional_if', { locals: { foo: 'bar' } })
 })
 
+test('conditional - "else" condition', (t) => {
+  return matchExpected(t, 'conditional_else', { locals: { foo: 'bar' } })
+})
+
 test('conditional - no render', (t) => {
   return matchExpected(t, 'conditional_norender', {})
 })
