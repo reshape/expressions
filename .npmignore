@@ -3,3 +3,4 @@ test
 node_modules
 .nyc_output
 coverage
+yarn.lock
