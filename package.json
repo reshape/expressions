@@ -10,11 +10,11 @@
   "bugs": "https://github.com/reshape/expressions/issues",
   "devDependencies": {
     "ava": "^0.16.0",
-    "coveralls": "^2.11.9",
-    "nyc": "^8.1.0",
+    "coveralls": "^2.11.15",
+    "nyc": "^8.4.0",
     "reshape": "reshape/reshape",
     "snazzy": "^5.0.0",
-    "standard": "^8.1.0"
+    "standard": "^8.5.0"
   },
   "engines": {
     "node": ">=6"
