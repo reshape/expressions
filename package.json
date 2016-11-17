@@ -9,7 +9,7 @@
   },
   "bugs": "https://github.com/reshape/expressions/issues",
   "devDependencies": {
-    "ava": "^0.16.0",
+    "ava": "^0.17.0",
     "coveralls": "^2.11.15",
     "nyc": "^9.0.1",
     "reshape": "reshape/reshape",
