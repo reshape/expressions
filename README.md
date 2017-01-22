@@ -1,5 +1,7 @@
 # Reshape Expressions
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/reshape/expressions.svg)](https://greenkeeper.io/)
+
 [![npm](https://img.shields.io/npm/v/reshape-expressions.svg?style=flat-square)](https://npmjs.com/package/reshape-expressions)
 [![tests](https://img.shields.io/travis/reshape/expressions.svg?style=flat-square)](https://travis-ci.org/reshape/expressions?branch=master)
 [![dependencies](https://img.shields.io/david/reshape/expressions.svg?style=flat-square)](https://david-dm.org/reshape/expressions)
