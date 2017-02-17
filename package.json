@@ -1,7 +1,7 @@
 {
   "name": "reshape-expressions",
   "description": "local variables, expressions, loops, and conditionals",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "Jeff Escalante",
   "ava": {
     "verbose": "true",
