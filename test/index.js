@@ -33,7 +33,7 @@ test('expression spacing', (t) => {
 
 test('expression error', (t) => {
   return expectError('expression_error', (err) => {
-    t.truthy(err.toString() === "SyntaxError: Unexpected character '@' (1:29)")
+    t.truthy(err.toString() === "SyntaxError: Unexpected character '@' (1:46)")
   })
 })
 

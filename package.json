@@ -9,12 +9,12 @@
   },
   "bugs": "https://github.com/reshape/expressions/issues",
   "devDependencies": {
-    "ava": "^0.17.0",
-    "coveralls": "^2.11.15",
-    "nyc": "^10.0.0",
-    "reshape": "reshape/reshape",
+    "ava": "^0.18.1",
+    "coveralls": "^2.11.16",
+    "nyc": "^10.1.2",
+    "reshape": "^0.4.1",
     "snazzy": "^6.0.0",
-    "standard": "^8.5.0"
+    "standard": "^8.6.0"
   },
   "engines": {
     "node": ">=6"
