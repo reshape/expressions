@@ -14,7 +14,7 @@
     "nyc": "^10.1.2",
     "reshape": "^0.4.1",
     "snazzy": "^6.0.0",
-    "standard": "^9.0.2"
+    "standard": "^10.0.0"
   },
   "engines": {
     "node": ">=6"
