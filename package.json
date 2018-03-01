@@ -13,7 +13,7 @@
     "coveralls": "^2.11.16",
     "nyc": "^10.1.2",
     "reshape": "^0.4.1",
-    "snazzy": "^6.0.0",
+    "snazzy": "^7.1.1",
     "standard": "^9.0.2"
   },
   "engines": {
